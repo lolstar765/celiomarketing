@@ -2,8 +2,8 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Untitled</title>
-  
+  <title>Celio Marketing</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/Y4WY3Prh/logo-celio.png">
 
 </head>
 <body>
@@ -11,57 +11,1341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Celio Marketing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celio Marketing | High-Converting Social Media for Realtors</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --color-bg: #0A0A0A;
+      --color-bg-light: #0A0A0A;
+      --color-text: #FFFFFF;
+      --color-text-muted: rgba(255, 255, 255, 0.85);
+      --color-accent: #00F0FF;
+      --color-accent-alt: #FF00F0;
+      --color-border: rgba(255, 255, 255, 0.1);
+      --section-padding: 120px 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    section {
+      padding: var(--section-padding);
+      position: relative;
+      overflow: hidden;
+      background-color: var(--color-bg);
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+    }
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+      opacity: 0.3;
+      z-index: -1;
+    }
+    p {
+      color: var(--color-text-muted);
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Particles Background */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .particle {
+      position: absolute;
+      background-color: var(--color-accent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 15s infinite linear;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 36px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      z-index: 1;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+      color: var(--color-bg);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 240, 255, 0.5);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-text);
+      border: 2px solid var(--color-accent);
+    }
+    .btn-secondary:hover {
+      background: rgba(0, 240, 255, 0.1);
+      transform: translateY(-5px);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+      background-color: transparent;
+    }
+    header.scrolled {
+      background-color: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 20px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 40px;
+      margin-right: 15px;
+    }
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 40px;
+    }
+    nav ul li a {
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+      background-color: var(--color-bg);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+    .hero h1 {
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease 0.2s forwards;
+      opacity: 0;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+      animation: fadeInUp 1s ease 0.4s forwards;
+      opacity: 0;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      animation: fadeInUp 1s ease 0.6s forwards;
+      opacity: 0;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: bounce 2s infinite;
+    }
+    .scroll-down span {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: var(--color-text-muted);
+    }
+    .scroll-down i {
+      color: var(--color-accent);
+      font-size: 1.5rem;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    .about {
+      background-color: var(--color-bg);
+      position: relative;
+    }
+    .about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 70%, rgba(255, 0, 240, 0.1) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .about-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+      justify-items: center;
+      align-items: center;
+    }
+    .about-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      width: 320px;
+      max-width: 90vw;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(255, 0, 240, 0.1));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .about-card:hover::before {
+      opacity: 1;
+    }
+    .about-card h3 {
+      color: var(--color-accent);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    .about-image {
+      display: none !important;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background-color: var(--color-bg);
+      position: relative;
+      text-align: center;
+    }
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 60% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 60%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .testimonials-container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .testimonial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 40px;
+      align-items: center;
+    }
+    .testimonial {
+      background: rgba(255,255,255,0.045);
+      border-radius: 18px;
+      padding: 32px 32px 28px 32px;
+      max-width: 600px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 8px 34px rgba(0,0,0,0.13);
+      text-align: left;
+      position: relative;
+      color: var(--color-text);
+    }
+    .testimonial-text {
+      font-size: 1.17rem;
+      color: var(--color-text-muted);
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+    .testimonial-user {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .testimonial-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-accent);
+      background: #222;
+    }
+    .testimonial-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--color-accent);
+      font-size: 1.1rem;
+    }
+    .testimonial-role {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    .services {
+      position: relative;
+      background-color: var(--color-bg);
+    }
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .services-container {
+      margin-top: 60px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: var(--color-bg);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 2;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-alt));
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .service-card:hover::before {
+      opacity: 0.5;
+    }
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 25px;
+      color: var(--color-accent);
+      font-size: 2rem;
+    }
+    .service-card h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .service-features {
+      list-style: none;
+      margin-top: 25px;
+    }
+    .service-features li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 25px;
+    }
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+    }
+
+    .contact {
+      background-color: var(--color-bg);
+      position: relative;
+    }
+    .contact::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(255, 0, 240, 0.1) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .contact-info {
+      position: relative;
+      z-index: 2;
+    }
+    .contact-methods {
+      margin-top: 40px;
+    }
+    .contact-method {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 240, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: var(--color-accent);
+      font-size: 1.2rem;
+    }
+    .contact-details h4 {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 5px;
+    }
+    .contact-details a {
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .contact-details a:hover {
+      color: var(--color-accent);
+    }
+    .contact-expectations {
+      margin-top: 40px;
+    }
+    .expectation-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .expectation-icon {
+      color: var(--color-accent);
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+    .contact-form {
+      position: relative;
+      z-index: 2;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 15px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-bottom-color: var(--color-accent);
+    }
+    .form-label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: var(--color-text-muted);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .form-input:focus + .form-label,
+    .form-input:not(:placeholder-shown) + .form-label {
+      top: -20px;
+      left: 0;
+      font-size: 0.8rem;
+      color: var(--color-accent);
+    }
+    textarea.form-input {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    footer {
+      background-color: var(--color-bg);
+      padding: 60px 0 30px;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .footer-logo-img {
+      height: 40px;
+      margin-right: 15px;
+    }
+    .footer-logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+    .footer-about {
+      max-width: 400px;
+    }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .footer-links h4 {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: var(--color-text);
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: var(--color-accent);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--color-border);
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 1200px) {
+      .container {
+        padding: 0 30px;
+      }
+    }
+    @media (max-width: 992px) {
+      .about-container,
+      .contact-container,
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+      .about-cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .footer-links {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: var(--color-bg);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: right 0.3s ease;
+        padding: 80px 40px;
+      }
+      nav.active {
+        right: 0;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 0 0 30px 0;
+      }
+      .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+      }
+      .hero-btns {
+        flex-direction: column;
+      }
+      .hero-stats {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .about-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonial-list {
+        padding: 0 4vw;
+      }
+    }
+    @media (max-width: 576px) {
+      :root {
+        --section-padding: 80px 0;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .about-cards {
+        grid-template-columns: 1fr;
+      }
+      .testimonial {
+        padding: 22px 6vw 18px 6vw;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section>
-    <h1>Privacy Policy</h1>
-    <p>Effective Date: July 2025</p>
+  <!-- Particles Background -->
+  <div class="particles" id="particles-js"></div>
 
-    <p>At Celio Marketing, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you interact with our website (celio.marketing) and services.</p>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container container">
+      <a href="#" class="logo">
+        <img src="https://i.ibb.co/Y4WY3Prh/logo-celio.png" alt="Celio Marketing Logo" class="logo-img">
+        <span class="logo-text">Celio Marketing</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h2>1. Information We Collect</h2>
-    <p>We may collect the following personal information:</p>
-    <ul>
-      <li>Name</li>
-      <li>Email address</li>
-      <li>Phone number</li>
-      <li>Company name</li>
-      <li>Message content (from contact forms)</li>
-    </ul>
-
-    <h2>2. How We Collect It</h2>
-    <p>We collect information when you:</p>
-    <ul>
-      <li>Submit a form on our website</li>
-      <li>Communicate with us via email</li>
-      <li>Visit or interact with our site (cookies, analytics)</li>
-    </ul>
-
-    <h2>3. How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-      <li>Respond to inquiries and provide support</li>
-      <li>Improve our services and site experience</li>
-      <li>Send occasional updates or service-related emails</li>
-    </ul>
-
-    <h2>4. Sharing Your Information</h2>
-    <p>We do not sell or rent your personal data. We may share it with trusted third parties who help us operate the website (e.g., Formspree, analytics tools) under strict confidentiality.</p>
-
-    <h2>5. Cookies and Analytics</h2>
-    <p>We may use cookies to enhance user experience and collect analytics data. You can control cookies through your browser settings.</p>
-
-    <h2>6. Your Rights</h2>
-    <p>You have the right to request access, correction, or deletion of your personal data. To do so, please contact us via our contact form.</p>
-
-    <h2>7. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Updates will be posted on this page with the effective date.</p>
-
-    <p>If you have any questions about our Privacy Policy, please contact us via the contact form on our website.</p>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Elevate Your Real Estate Game with <span class="gradient-text">Proven Social Media Marketing</span></h1>
+        <p>Custom campaigns that keep your pipeline full — so you can focus on closing deals.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Schedule Strategy Call</a>
+          <a href="#services" class="btn btn-secondary">View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Agents Served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Leads Generated</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <span>Scroll Down</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="particles" id="particles-about"></div>
+    <div class="container">
+      <h2>About Celio Marketing</h2>
+      <div class="about-container">
+        <div class="about-content">
+          <p>We're a specialized social media marketing agency focused exclusively on helping real estate professionals stand out online with high-converting social media strategies.</p>
+          <div class="about-cards">
+            <div class="about-card">
+              <h3>Exclusive Focus</h3>
+              <p>We only work with real estate professionals, giving us deep market knowledge and specialized expertise.</p>
+            </div>
+            <div class="about-card">
+              <h3>Data-Driven Approach</h3>
+              <p>Our strategies are built on analytics and performance metrics, not guesswork.</p>
+            </div>
+            <div class="about-card">
+              <h3>Full-Service Management</h3>
+              <p>From strategy to execution, we handle everything so you can focus on closing deals.</p>
+            </div>
+            <div class="about-card">
+              <h3>Proven Results</h3>
+              <p>We've generated hundreds of qualified leads for our real estate clients.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Removed about-image -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="particles" id="particles-testimonials"></div>
+    <div class="container testimonials-container">
+      <h2>Testimonials</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I was hesitant about outsourcing my social media, but working with Celio has been a great decision. The campaigns are honest, targeted, and have brought in new leads who actually convert. I appreciate their transparency — they tell you what works and what doesn't."
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Derek R." class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Derek R.</span>
+              <span class="testimonial-role">Realtor, Texas</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I've tried other agencies before, but none took the time to understand my business like Celio did. We didn't see overnight results, but after a few weeks the quality of leads improved and my follow-ups became much easier. If you want an agency that really listens, talk to them."
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M." class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Lisa M.</span>
+              <span class="testimonial-role">Residential Broker, California</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Celio's team helped me stay consistent with my online presence and their reporting is straightforward. Sometimes campaigns need tweaks, and they're upfront about setting realistic expectations. It's refreshing to work with a team that cares about long-term growth, not just quick wins."
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jon P." class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-info">
+              <span class="testimonial-name">Jon P.</span>
+              <span class="testimonial-role">Real Estate Agent, Florida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="particles" id="particles-services"></div>
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>Comprehensive social media advertising solutions designed specifically for real estate professionals looking to generate high-quality buyer and seller leads.</p>
+      <div class="services-container">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Social Media Advertising Strategy</h3>
+            <p>Comprehensive strategy development tailored specifically for real estate professionals, focusing on buyer and seller lead generation.</p>
+            <ul class="service-features">
+              <li>Audience Research</li>
+              <li>Campaign Planning</li>
+              <li>Budget Optimization</li>
+              <li>Performance Tracking</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-facebook"></i>
+            </div>
+            <h3>Facebook & Instagram Ads</h3>
+            <p>Expert management of Facebook and Instagram campaigns designed to generate high-quality real estate leads.</p>
+            <ul class="service-features">
+              <li>Ad Creation</li>
+              <li>Audience Targeting</li>
+              <li>A/B Testing</li>
+              <li>Lead Nurturing</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Real Estate Lead Generation</h3>
+            <p>End-to-end lead generation solutions that deliver qualified prospects ready to buy or sell properties.</p>
+            <ul class="service-features">
+              <li>Lead Qualification</li>
+              <li>CRM Integration</li>
+              <li>Follow-up Automation</li>
+              <li>ROI Tracking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+  <div class="particles" id="particles-contact"></div>
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Ready to take your real estate business to the next level? Let's discuss how we can help you generate more qualified leads through strategic social media advertising.</p>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Start a Conversation</h3>
+        <p>We're always excited to work with new real estate professionals. Whether you're looking to generate buyer leads, seller leads, or both, we have the expertise to help you succeed.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:info@celio.marketing">info@celio.marketing</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <a href="tel:+12025550123">(202) 555-0123</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-expectations">
+          <h4>What to Expect:</h4>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Response within 24 hours</p>
+          </div>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Free consultation call</p>
+          </div>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Customized strategy proposal</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mblyvoel" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Full Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address *</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
+            <label for="phone" class="form-label">Phone Number</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" name="company" class="form-input" placeholder=" ">
+            <label for="company" class="form-label">Real Estate Company</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+            <label for="message" class="form-label">Tell us about your business and goals *</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="formMessage" class="form-message hidden">
+          <div class="message-content">
+            <i class="fas fa-check-circle"></i>
+            <h4>Thanks for reaching out!</h4>
+            <p>We’ve received your message and one of our specialists will get back to you within 24 hours. We’re excited to help you grow your real estate business.</p>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="formError" class="form-message error hidden">
+          <div class="message-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h4>Something went wrong</h4>
+            <p>Please try again later or email us directly at <a href="mailto:info@celio.marketing">info@celio.marketing</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add This CSS -->
+<style>
+  .form-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(0, 255, 170, 0.05);
+    border: 1px solid #00ffaa40;
+    color: #00ffae;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+  }
+
+  .form-message h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-message p {
+    font-size: 1rem;
+    margin: 0;
+    color: #bfffe8;
+  }
+
+  .form-message i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .form-message.error {
+    background: rgba(255, 0, 0, 0.05);
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+  }
+
+  .form-message.error p {
+    color: #ffbaba;
+  }
+
+  .hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .form-message.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .contact-expectations {
+    margin-top: 30px;
+  }
+
+  .expectation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .expectation-icon {
+    color: #00ffae;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expectation-item p {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+</style>
+
+<!-- Add This Script -->
+<script>
+  const form = document.getElementById('contactForm');
+  const messageBox = document.getElementById('formMessage');
+  const errorBox = document.getElementById('formError');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      messageBox.classList.add('show');
+      errorBox.classList.remove('show');
+    } else {
+      errorBox.classList.add('show');
+      messageBox.classList.remove('show');
+    }
+  });
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="particles" id="particles-footer"></div>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="https://i.ibb.co/BVXHH3fC/design-a-modern-professional-logo-for-ce-DFg3-WFl-GQj-Sg2l-WFKED3rw-1xt-TBg-Wv-Q3usp5-EPDLBe-Xw-Phot.png" alt="Celio Marketing Logo" class="footer-logo-img">
+            <span class="footer-logo-text">Celio Marketing</span>
+          </div>
+          <p>Specialized social media marketing for real estate agents to generate high-quality leads and build trust online.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@celio.marketing">info@celio.marketing</a></li>
+              <li><a href="tel:+12025550123">(202) 555-0123</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Celio Marketing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('nav');
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Form Input Animation
+    const formInputs = document.querySelectorAll('.form-input');
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      input.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+      if (input.value) {
+        input.parentElement.classList.add('focused');
+      }
+    });
+
+    // Particles Background
+    function createParticles() {
+      const sections = [
+        { id: 'particles-js', count: 60 },
+        { id: 'particles-about', count: 40 },
+        { id: 'particles-testimonials', count: 35 },
+        { id: 'particles-services', count: 40 },
+        { id: 'particles-contact', count: 40 },
+        { id: 'particles-footer', count: 30 }
+      ];
+      sections.forEach(section => {
+        const container = document.getElementById(section.id);
+        if (!container) return;
+        for (let i = 0; i < section.count; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          const size = Math.random() * 6 + 4 + 'px';
+          particle.style.width = size;
+          particle.style.height = size;
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = '100%';
+          particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+          particle.style.backgroundColor = Math.random() > 0.5 ? 'var(--color-accent)' : 'var(--color-accent-alt)';
+          particle.style.opacity = Math.random() * 0.4 + 0.2;
+          container.appendChild(particle);
+        }
+      });
+    }
+    createParticles();
+  </script>
 </body>
 </html>
 <!-- partial -->
