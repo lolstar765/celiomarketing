@@ -1033,83 +1033,111 @@
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
-    <div class="particles" id="particles-contact"></div>
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <p>Ready to take your real estate business to the next level? Let's discuss how we can help you generate more qualified leads through strategic social media advertising.</p>
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Let's Start a Conversation</h3>
-          <p>We're always excited to work with new real estate professionals. Whether you're looking to generate buyer leads, seller leads, or both, we have the expertise to help you succeed.</p>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <a href="mailto:info@celio.marketing">info@celio.marketing</a>
-              </div>
+  <div class="particles" id="particles-contact"></div>
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Ready to take your real estate business to the next level? Let's discuss how we can help you generate more qualified leads through strategic social media advertising.</p>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Start a Conversation</h3>
+        <p>We're always excited to work with new real estate professionals. Whether you're looking to generate buyer leads, seller leads, or both, we have the expertise to help you succeed.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Phone</h4>
-                <a href="tel:+12025550123">(202) 555-0123</a>
-              </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:info@celio.marketing">info@celio.marketing</a>
             </div>
           </div>
-          <div class="contact-expectations">
-            <h4>What to Expect:</h4>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <p>Response within 24 hours</p>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
             </div>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <p>Free consultation call</p>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <a href="tel:+12025550123">(202) 555-0123</a>
             </div>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div class="contact-expectations">
+          <h4>What to Expect:</h4>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Response within 24 hours</p>
+          </div>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Free consultation call</p>
+          </div>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
               <p>Customized strategy proposal</p>
             </div>
           </div>
         </div>
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" class="form-input" placeholder=" " required>
-              <label for="name" class="form-label">Full Name *</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" class="form-input" placeholder=" " required>
-              <label for="email" class="form-label">Email Address *</label>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="phone" class="form-input" placeholder=" ">
-              <label for="phone" class="form-label">Phone Number</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="company" class="form-input" placeholder=" ">
-              <label for="company" class="form-label">Real Estate Company</label>
-            </div>
-            <div class="form-group">
-              <textarea id="message" class="form-input" placeholder=" " required></textarea>
-              <label for="message" class="form-label">Tell us about your business and goals *</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mblyvoel" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Full Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address *</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
+            <label for="phone" class="form-label">Phone Number</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" name="company" class="form-input" placeholder=" ">
+            <label for="company" class="form-label">Real Estate Company</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+            <label for="message" class="form-label">Tell us about your business and goals *</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="successMessage" style="display: none; color: #00ffae; font-weight: 600; margin-top: 20px;">
+          ✅ Thank you for contacting us. We'll reach out to you soon!
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      successMessage.style.display = 'block';
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  });
+</script>
 
   <!-- Footer -->
   <footer>
