@@ -3,31 +3,394 @@
 <head>
   <meta charset="UTF-8" />
   <title>Terms of Service | Celio Marketing</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://i.ibb.co/Y4WY3Prh/logo-celio.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --color-bg: #0A0A0A;
+      --color-bg-light: #0A0A0A;
+      --color-text: #FFFFFF;
+      --color-text-muted: rgba(255, 255, 255, 0.85);
+      --color-accent: #00F0FF;
+      --color-accent-alt: #FF00F0;
+      --color-border: rgba(255, 255, 255, 0.1);
+      --section-padding: 120px 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Particles Background */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .particle {
+      position: absolute;
+      background-color: var(--color-accent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 15s infinite linear;
+      bottom: -100px;
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+      background-color: transparent;
+    }
+    
+    header.scrolled {
+      background-color: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 20px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .logo-img {
+      height: 40px;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+    
+    /* Main Content */
+    main {
+      padding: 180px 0 100px;
+      position: relative;
+    }
+    
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      z-index: -1;
+    }
+    
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+      opacity: 0.3;
+      z-index: -1;
+    }
+    
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin: 40px 0 20px;
+      color: var(--color-accent);
+    }
+    
+    p {
+      color: var(--color-text-muted);
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    ul {
+      margin-bottom: 25px;
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: var(--color-text-muted);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--color-bg);
+      padding: 60px 0 30px;
+      position: relative;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo-img {
+      height: 40px;
+      margin-right: 15px;
+    }
+    
+    .footer-logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+    
+    .footer-about {
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--color-border);
+      position: relative;
+      z-index: 2;
+    }
+    
+    .footer-policies {
+      margin-top: 15px;
+    }
+    
+    .footer-policies a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-policies a:hover {
+      color: var(--color-accent);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+      
+      main {
+        padding: 150px 0 80px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Particles Background -->
+  <div class="particles" id="particles-tos"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container container">
+      <a href="index.html" class="logo">
+        <img src="https://i.ibb.co/Y4WY3Prh/logo-celio.png" alt="Celio Marketing Logo" class="logo-img">
+        <span class="logo-text">Celio Marketing</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
   <main>
-    <h1>Terms of Service</h1>
-    <p>Effective Date: July 8, 2025</p>
+    <div class="container">
+      <h1>Terms of <span class="gradient-text">Service</span></h1>
+      <p>Effective Date: July 8, 2025</p>
 
-    <p>Welcome to Celio Marketing. By using our website, you agree to the following terms:</p>
+      <p>Welcome to Celio Marketing. By using our website, you agree to the following terms:</p>
 
-    <h2>Use of Website</h2>
-    <p>This site is intended for informational and promotional purposes. You agree not to misuse the content or services provided.</p>
+      <h2>Use of Website</h2>
+      <p>This site is intended for informational and promotional purposes. You agree not to misuse the content or services provided.</p>
 
-    <h2>Intellectual Property</h2>
-    <p>All content on this site, including logos, graphics, and text, is the property of Celio Marketing and may not be reproduced without permission.</p>
+      <h2>Intellectual Property</h2>
+      <p>All content on this site, including logos, graphics, and text, is the property of Celio Marketing and may not be reproduced without permission.</p>
 
-    <h2>Limitation of Liability</h2>
-    <p>Celio Marketing is not liable for any direct or indirect damages resulting from your use of this site or reliance on its content.</p>
+      <h2>Limitation of Liability</h2>
+      <p>Celio Marketing is not liable for any direct or indirect damages resulting from your use of this site or reliance on its content.</p>
 
-    <h2>External Links</h2>
-    <p>This website may link to third-party sites. We are not responsible for their content or privacy practices.</p>
+      <h2>External Links</h2>
+      <p>This website may link to third-party sites. We are not responsible for their content or privacy practices.</p>
 
-    <h2>Changes to These Terms</h2>
-    <p>We may revise these terms at any time. Continued use of the site means you accept the updated terms.</p>
+      <h2>Changes to These Terms</h2>
+      <p>We may revise these terms at any time. Continued use of the site means you accept the updated terms.</p>
 
-    <p>If you have any questions about these terms, contact us through our website.</p>
+      <p>If you have any questions about these terms, contact us through our website.</p>
+    </div>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="https://i.ibb.co/Y4WY3Prh/logo-celio.png" alt="Celio Marketing Logo" class="footer-logo-img">
+            <span class="footer-logo-text">Celio Marketing</span>
+          </div>
+          <p>Specialized social media marketing for real estate agents to generate high-quality leads and build trust online.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Celio Marketing. All rights reserved.</p>
+        <div class="footer-policies">
+          <a href="privacy.html">Privacy Policy</a>
+          <span> | </span>
+          <a href="termsofservice.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Particles Background
+    function createParticles() {
+      const container = document.getElementById('particles-tos');
+      const count = 40;
+      
+      // Clear any existing particles
+      container.innerHTML = '';
+      
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random properties
+        const size = Math.random() * 6 + 4;
+        const left = Math.random() * 100;
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * 5;
+        const opacity = Math.random() * 0.4 + 0.2;
+        const color = Math.random() > 0.5 ? 'var(--color-accent)' : 'var(--color-accent-alt)';
+        
+        // Apply styles
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.bottom = '-20px';
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.opacity = opacity;
+        particle.style.backgroundColor = color;
+        
+        container.appendChild(particle);
+      }
+    }
+    
+    // Initialize particles when page loads
+    window.addEventListener('load', createParticles);
+    
+    // Recreate particles on resize to avoid gaps
+    window.addEventListener('resize', createParticles);
+  </script>
 </body>
 </html>
