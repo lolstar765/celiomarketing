@@ -1243,124 +1243,77 @@
 
 
   <!-- Footer -->
-          <footer id="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Services</h3>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">SEO</a></li>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">Social Media</a></li>
-              <li><a href="#">Content Creation</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Contact Us</h3>
-            <ul>
-              <li><i class="fas fa-map-marker-alt"></i> 123 Business St, City</li>
-              <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-              <li><i class="fas fa-envelope"></i> info@example.com</li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
-          <div class="footer-policies">
-            <a href="https://www.celio.marketing/privacy.html" target="_blank">Privacy Policy</a>
-            <span> | </span>
-            <a href="https://www.celio.marketing/termsofservice.html" target="_blank">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-      <div id="particles-footer"></div>
-    </footer>
+          </footer>
 
-    <script>
-      // Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const nav = document.getElementById('nav');
-      mobileMenuBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
-          '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-      });
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('nav');
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
 
-      // Header Scroll Effect
-      const header = document.getElementById('header');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-
-      // Form Input Animation
-      const formInputs = document.querySelectorAll('.form-input');
-      formInputs.forEach(input => {
-        input.addEventListener('focus', function() {
-          this.parentElement.classList.add('focused');
-        });
-        input.addEventListener('blur', function() {
-          if (!this.value) {
-            this.parentElement.classList.remove('focused');
-          }
-        });
-        if (input.value) {
-          input.parentElement.classList.add('focused');
-        }
-      });
-
-      // Particles Background
-      function createParticles() {
-        const sections = [
-          { id: 'particles-js', count: 60 },
-          { id: 'particles-about', count: 40 },
-          { id: 'particles-testimonials', count: 35 },
-          { id: 'particles-services', count: 40 },
-          { id: 'particles-contact', count: 40 },
-          { id: 'particles-footer', count: 30 }
-        ];
-        sections.forEach(section => {
-          const container = document.getElementById(section.id);
-          if (!container) return;
-          for (let i = 0; i < section.count; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 6 + 4 + 'px';
-            particle.style.width = size;
-            particle.style.height = size;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = '100%';
-            particle.style.animationDuration = Math.random() * 10 + 10 + 's';
-            particle.style.backgroundColor = Math.random() > 0.5 ? 'var(--color-accent)' : 'var(--color-accent-alt)';
-            particle.style.opacity = Math.random() * 0.4 + 0.2;
-            container.appendChild(particle);
-          }
-        });
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
-      createParticles();
-    </script>
-  </body>
+    });
+
+    // Form Input Animation
+    const formInputs = document.querySelectorAll('.form-input');
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      input.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+      if (input.value) {
+        input.parentElement.classList.add('focused');
+      }
+    });
+
+    // Particles Background
+    function createParticles() {
+      const sections = [
+        { id: 'particles-js', count: 60 },
+        { id: 'particles-about', count: 40 },
+        { id: 'particles-testimonials', count: 35 },
+        { id: 'particles-services', count: 40 },
+        { id: 'particles-contact', count: 40 },
+        { id: 'particles-footer', count: 30 }
+      ];
+      sections.forEach(section => {
+        const container = document.getElementById(section.id);
+        if (!container) return;
+        for (let i = 0; i < section.count; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          const size = Math.random() * 6 + 4 + 'px';
+          particle.style.width = size;
+          particle.style.height = size;
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = '100%';
+          particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+          particle.style.backgroundColor = Math.random() > 0.5 ? 'var(--color-accent)' : 'var(--color-accent-alt)';
+          particle.style.opacity = Math.random() * 0.4 + 0.2;
+          container.appendChild(particle);
+        }
+      });
+    }
+    createParticles();
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
 </html>
