@@ -1133,6 +1133,230 @@
     </div>
   </div>
 </section>
+   <section class="founder">
+  <div class="particles" id="particles-founder"></div>
+  <div class="container">
+    <div class="founder-container">
+      <div class="founder-card">
+        <div class="founder-image-wrapper">
+          <div class="founder-image">
+            <img src="https://i.ibb.co/Q3FhVKLJ/dil1.jpg" alt="Dil Muhammad - Founder">
+          </div>
+          <div class="founder-social">
+            <a href="https://www.instagram.com/dil.muhammadch/" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:dilmuhammad@celio.marketing" class="social-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="founder-content">
+          <span class="founder-label">Founder & CEO</span>
+          <h3 class="founder-name">Dil Muhammad</h3>
+          <p class="founder-bio">The visionary behind Celio Marketing, driving innovative digital strategies for real estate professionals.</p>
+          <div class="founder-contact">
+            <a href="mailto:dilmuhammad@celio.marketing" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>dilmuhammad@celio.marketing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Founder Section - Modern UI Styles */
+  .founder {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .founder-card {
+    display: flex;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 255, 170, 0.1);
+    border: 1px solid rgba(0, 255, 170, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 35px 60px -15px rgba(0, 255, 170, 0.2);
+  }
+
+  .founder-image-wrapper {
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    background: linear-gradient(45deg, #00ffaa20, #00aaff20);
+  }
+
+  .founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 50px auto;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 8px rgba(0, 255, 170, 0.1);
+    position: relative;
+  }
+
+  .founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .founder-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .founder-social {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    background: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 170, 0.3);
+  }
+
+  .founder-content {
+    padding: 60px;
+    flex: 1;
+  }
+
+  .founder-label {
+    display: inline-block;
+    background: rgba(0, 255, 170, 0.1);
+    color: var(--color-accent);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .founder-name {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: white;
+    position: relative;
+    display: inline-block;
+  }
+
+  .founder-name::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 3px;
+  }
+
+  .founder-bio {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+  }
+
+  .contact-item:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-item:hover i {
+    transform: scale(1.2);
+  }
+
+  /* Particles for founder section */
+  #particles-founder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    .founder-card {
+      flex-direction: column;
+    }
+    
+    .founder-image-wrapper {
+      width: 100%;
+      padding: 40px 0;
+    }
+    
+    .founder-image {
+      margin: 0 auto;
+    }
+    
+    .founder-social {
+      position: static;
+      margin-top: 20px;
+    }
+    
+    .founder-content {
+      padding: 40px 20px;
+    }
+  }
+</style>
 
 <!-- Add This CSS -->
 <style>
