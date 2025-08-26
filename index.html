@@ -1,24 +1,31 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="UTF-8">
+  <title>Celio Marketing</title> <!-- Keeps your original browser tab title -->
+  <meta name="description" content="Celio Marketing helps real estate agents and small teams grow online with high-performance social media marketing strategies tailored to the real estate industry.">
+  <link rel="canonical" href="https://celio.marketing/">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/Y4WY3Prh/logo-celio.png"> <!-- Keeps your favicon -->
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Celio Marketing | Social Media Marketing for Pet Services</title>
-  <meta name="description" content="Celio Marketing helps pet service businesses like groomers, daycare, and trainers grow online with high-performance social media marketing strategies.">
-  <link rel="canonical" href="https://celio.marketing/">
-  <link rel="icon" type="image/png" href="https://i.ibb.co/wZTgtsXj/logo-pet-celio-no-bg.png">
+  <title>Celio Marketing | High-Converting Social Media for Realtors</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --color-bg: #fff9f4;
-      --color-bg-light: #fffdfa;
-      --color-text: #2E2E2E;
-      --color-text-muted: rgba(46, 46, 46, 0.85);
-      --color-accent: #FF9E44;
-      --color-accent-alt: #44B3FF;
-      --color-border: rgba(44, 44, 44, 0.08);
-      --paw-color: #B77B3A; /* For dark paw prints */
+      --color-bg: #0A0A0A;
+      --color-bg-light: #0A0A0A;
+      --color-text: #FFFFFF;
+      --color-text-muted: rgba(255, 255, 255, 0.85);
+      --color-accent: #00F0FF;
+      --color-accent-alt: #FF00F0;
+      --color-border: rgba(255, 255, 255, 0.1);
       --section-padding: 120px 0;
     }
 
@@ -50,7 +57,6 @@
     h1, h2, h3 {
       font-weight: 700;
       line-height: 1.2;
-      color: var(--color-text);
     }
     h1 {
       font-size: clamp(3rem, 6vw, 5rem);
@@ -69,7 +75,7 @@
       width: 100%;
       height: 8px;
       background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
-      opacity: 0.15;
+      opacity: 0.3;
       z-index: -1;
     }
     p {
@@ -79,9 +85,38 @@
       line-height: 1.8;
     }
 
-    /* Paw Prints Background - REMOVED */
-    .paw-prints {
-      display: none;
+    /* Particles Background */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .particle {
+      position: absolute;
+      background-color: var(--color-accent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 15s infinite linear;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
     }
 
     .gradient-text {
@@ -108,20 +143,20 @@
     }
     .btn-primary {
       background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
-      color: #fff;
-      box-shadow: 0 10px 30px rgba(255, 158, 68, 0.13);
+      color: var(--color-bg);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
     }
     .btn-primary:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(255, 158, 68, 0.18);
+      box-shadow: 0 15px 40px rgba(0, 240, 255, 0.5);
     }
     .btn-secondary {
       background: transparent;
-      color: var(--color-accent);
+      color: var(--color-text);
       border: 2px solid var(--color-accent);
     }
     .btn-secondary:hover {
-      background: rgba(255, 158, 68, 0.08);
+      background: rgba(0, 240, 255, 0.1);
       transform: translateY(-5px);
     }
 
@@ -136,10 +171,10 @@
       background-color: transparent;
     }
     header.scrolled {
-      background-color: rgba(255, 249, 244, 0.94);
+      background-color: rgba(10, 10, 10, 0.95);
       backdrop-filter: blur(10px);
       padding: 20px 0;
-      box-shadow: 0 5px 20px rgba(255, 158, 68, 0.07);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
     .header-container {
       display: flex;
@@ -158,7 +193,7 @@
     .logo-text {
       font-weight: 700;
       font-size: 1.5rem;
-      color: var(--color-accent);
+      color: var(--color-text);
     }
     nav ul {
       display: flex;
@@ -191,7 +226,7 @@
       display: none;
       background: none;
       border: none;
-      color: var(--color-accent);
+      color: var(--color-text);
       font-size: 1.5rem;
       cursor: pointer;
     }
@@ -212,7 +247,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 70% 30%, rgba(255, 158, 68, 0.07) 0%, transparent 50%);
+      background: radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
       z-index: 1;
     }
     .hero-content {
@@ -289,7 +324,7 @@
     }
 
     .about {
-      background-color: var(--color-bg-light);
+      background-color: var(--color-bg);
       position: relative;
     }
     .about::before {
@@ -299,7 +334,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 30% 70%, rgba(68, 179, 255, 0.07) 0%, transparent 50%);
+      background: radial-gradient(circle at 30% 70%, rgba(255, 0, 240, 0.1) 0%, transparent 50%);
       z-index: 1;
       pointer-events: none;
     }
@@ -328,13 +363,13 @@
       align-items: center;
     }
     .about-card {
-      background: rgba(255, 158, 68, 0.09);
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 20px;
       padding: 30px;
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 158, 68, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       width: 320px;
       max-width: 90vw;
       text-align: center;
@@ -349,14 +384,13 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(255, 158, 68, 0.07), rgba(68, 179, 255, 0.07));
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(255, 0, 240, 0.1));
       opacity: 0;
       transition: opacity 0.4s ease;
-      z-index: -1;
     }
     .about-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(255, 158, 68, 0.12);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
     .about-card:hover::before {
       opacity: 1;
@@ -370,7 +404,7 @@
       display: none !important;
     }
 
-    /* Testimonials Section - Updated with card interface */
+    /* Testimonials Section */
     .testimonials {
       background-color: var(--color-bg);
       position: relative;
@@ -383,7 +417,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 60% 20%, rgba(255, 158, 68, 0.06) 0%, transparent 60%);
+      background: radial-gradient(circle at 60% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 60%);
       z-index: 1;
       pointer-events: none;
     }
@@ -401,36 +435,15 @@
       align-items: center;
     }
     .testimonial {
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      background: rgba(255,255,255,0.045);
+      border-radius: 18px;
+      padding: 32px 32px 28px 32px;
+      max-width: 600px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 8px 34px rgba(0,0,0,0.13);
+      text-align: left;
       position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 158, 68, 0.13);
-      z-index: 2;
-      max-width: 700px;
-      box-shadow: 0 10px 30px rgba(255, 158, 68, 0.08);
-    }
-    .testimonial::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-alt));
-      border-radius: 22px;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    .testimonial:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(255, 158, 68, 0.12);
-    }
-    .testimonial:hover::before {
-      opacity: 0.1;
+      color: var(--color-text);
     }
     .testimonial-text {
       font-size: 1.17rem;
@@ -449,7 +462,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--color-accent);
-      background: #fff;
+      background: #222;
     }
     .testimonial-info {
       display: flex;
@@ -476,7 +489,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 80% 20%, rgba(255, 158, 68, 0.07) 0%, transparent 50%);
+      background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
       z-index: 1;
       pointer-events: none;
     }
@@ -489,13 +502,13 @@
       gap: 30px;
     }
     .service-card {
-      background: #fff;
+      background: var(--color-bg);
       border-radius: 20px;
       padding: 40px;
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 158, 68, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       z-index: 2;
     }
     .service-card::before {
@@ -513,10 +526,10 @@
     }
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(255, 158, 68, 0.10);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
     .service-card:hover::before {
-      opacity: 0.18;
+      opacity: 0.5;
     }
     .service-icon {
       width: 60px;
@@ -546,7 +559,7 @@
     }
 
     .contact {
-      background-color: var(--color-bg-light);
+      background-color: var(--color-bg);
       position: relative;
     }
     .contact::before {
@@ -556,7 +569,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 20% 80%, rgba(68, 179, 255, 0.06) 0%, transparent 50%);
+      background: radial-gradient(circle at 20% 80%, rgba(255, 0, 240, 0.1) 0%, transparent 50%);
       z-index: 1;
       pointer-events: none;
     }
@@ -580,7 +593,7 @@
     .contact-icon {
       width: 50px;
       height: 50px;
-      background: rgba(255, 158, 68, 0.12);
+      background: rgba(0, 240, 255, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -606,26 +619,15 @@
     .contact-expectations {
       margin-top: 40px;
     }
-    .contact-expectations h4 {
-      margin-bottom: 20px;
-    }
     .expectation-item {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       margin-bottom: 15px;
     }
     .expectation-icon {
       color: var(--color-accent);
       margin-right: 15px;
       font-size: 1.2rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-    .expectation-item p {
-      margin: 0;
-      color: var(--color-text-muted);
-      font-size: 1rem;
-      line-height: 1.6;
     }
     .contact-form {
       position: relative;
@@ -645,12 +647,10 @@
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
       transition: all 0.3s ease;
-      background-color: #fff;
     }
     .form-input:focus {
       outline: none;
       border-bottom-color: var(--color-accent);
-      background-color: #fffbe8;
     }
     .form-label {
       position: absolute;
@@ -673,7 +673,7 @@
     }
 
     footer {
-      background-color: var(--color-bg-light);
+      background-color: var(--color-bg);
       padding: 60px 0 30px;
       position: relative;
     }
@@ -684,7 +684,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 50% 0%, rgba(255, 158, 68, 0.06) 0%, transparent 50%);
+      background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
       z-index: 1;
       pointer-events: none;
     }
@@ -708,7 +708,7 @@
     .footer-logo-text {
       font-weight: 700;
       font-size: 1.5rem;
-      color: var(--color-accent);
+      color: var(--color-text);
     }
     .footer-about {
       max-width: 400px;
@@ -842,192 +842,17 @@
         padding: 22px 6vw 18px 6vw;
       }
     }
-
-    /* Form Messages */
-    .form-message {
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 12px;
-      background: rgba(255, 158, 68, 0.12);
-      border: 1px solid rgba(255, 158, 68, 0.17);
-      color: var(--color-accent);
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 20px rgba(255, 158, 68, 0.05);
-    }
-    .form-message h4 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-    .form-message p {
-      font-size: 1rem;
-      margin: 0;
-      color: #c78644;
-    }
-    .form-message i {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      display: block;
-    }
-    .form-message.error {
-      background: rgba(255, 0, 0, 0.05);
-      border-color: #ff4d4d;
-      color: #ff4d4d;
-    }
-    .form-message.error p {
-      color: #ffbaba;
-    }
-    .hidden {
-      display: none;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .form-message.show {
-      display: block;
-      opacity: 1;
-    }
-
-    /* Founder Section */
-    .founder {
-      padding: 100px 0;
-      background: linear-gradient(135deg, #fffbe8 0%, var(--color-bg) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .founder-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .founder-card {
-      display: flex;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(255, 158, 68, 0.11);
-      border: 1px solid rgba(255, 158, 68, 0.11);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .founder-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 35px 60px -15px rgba(255, 158, 68, 0.16);
-    }
-    .founder-image-wrapper {
-      position: relative;
-      width: 300px;
-      min-width: 300px;
-      background: linear-gradient(45deg, rgba(255, 158, 68, 0.12), rgba(68, 179, 255, 0.11));
-    }
-    .founder-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 50px auto;
-      border: 3px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 0 8px rgba(255, 158, 68, 0.09);
-      position: relative;
-    }
-    .founder-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .founder-image:hover img {
-      transform: scale(1.05);
-    }
-    .founder-content {
-      padding: 60px;
-      flex: 1;
-    }
-    .founder-label {
-      display: inline-block;
-      background: rgba(255, 158, 68, 0.13);
-      color: var(--color-accent);
-      padding: 6px 15px;
-      border-radius: 30px;
-      font-size: 14px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-    .founder-name {
-      font-size: 2.5rem;
-      margin: 0 0 15px 0;
-      color: var(--color-text);
-      position: relative;
-      display: inline-block;
-    }
-    .founder-name::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--color-accent);
-      border-radius: 3px;
-    }
-    .founder-bio {
-      color: var(--color-text-muted);
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      color: var(--color-text);
-      text-decoration: none;
-      margin-bottom: 15px;
-      transition: color 0.3s ease;
-    }
-    .contact-item i {
-      font-size: 1.2rem;
-      color: var(--color-accent);
-      transition: transform 0.3s ease;
-    }
-    .contact-item:hover {
-      color: var(--color-accent);
-    }
-    .contact-item:hover i {
-      transform: scale(1.2);
-    }
-    #particles-founder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-    @media (max-width: 768px) {
-      .founder-card {
-        flex-direction: column;
-      }
-      .founder-image-wrapper {
-        width: 100%;
-        padding: 40px 0;
-      }
-      .founder-content {
-        padding: 40px 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Paw Prints Background - REMOVED -->
-  <div class="paw-prints" id="paw-prints-js"></div>
+  <!-- Particles Background -->
+  <div class="particles" id="particles-js"></div>
 
   <!-- Header -->
   <header id="header">
     <div class="header-container container">
       <a href="#" class="logo">
-        <img src="https://i.ibb.co/wZTgtsXj/logo-pet-celio-no-bg.png" alt="Celio Marketing Logo" class="logo-img">
+        <img src="https://i.ibb.co/Y4WY3Prh/logo-celio.png" alt="Celio Marketing Logo" class="logo-img">
         <span class="logo-text">Celio Marketing</span>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -1049,13 +874,14 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-content">
-        <h1>Grow Your Pet Services Business with <span class="gradient-text">Tailored Social Media Marketing</span></h1>
-        <p>Custom campaigns that bring more furry friends and happy clients through your doors.</p>
+        <h1>Accelerate Your Growth in Real Estate with <span class="gradient-text">Proven Social Media Marketing</span></h1>
+        <p>Custom campaigns that keep your pipeline full — so you can focus on closing deals.</p>
         <div class="hero-btns">
-          <a href="https://calendly.com/celio_marketing/new-meeting" target="_blank" class="btn btn-primary">
-            Schedule Strategy Call
-          </a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
+         <a href="https://calendly.com/celio_marketing/new-meeting" target="_blank" class="btn btn-primary">
+  Schedule Strategy Call
+</a>
+ <a href="#services" class="btn btn-secondary">View Services</a>
+         </div>
         </div>
       </div>
     </div>
@@ -1067,88 +893,95 @@
 
   <!-- About Section -->
   <section class="about" id="about">
-    <div class="paw-prints" id="paw-prints-about"></div>
+    <div class="particles" id="particles-about"></div>
     <div class="container">
       <h2>About Celio Marketing</h2>
       <div class="about-container">
         <div class="about-content">
-          <p>We're a social media marketing agency dedicated to helping pet service businesses — from groomers to pet daycare centers — grow their brand and attract loyal clients online.</p>
+          <p>We're a specialized social media marketing agency focused exclusively on helping real estate professionals stand out online with high-converting social media strategies.</p>
           <div class="about-cards">
             <div class="about-card">
               <h3>Exclusive Focus</h3>
-              <p>We specialize in pet services, understanding your unique audience and business needs.</p>
+              <p>We only work with real estate professionals, giving us deep market knowledge and specialized expertise.</p>
             </div>
             <div class="about-card">
               <h3>Data-Driven Approach</h3>
-              <p>We track campaigns to ensure new clients and bookings for your pet business.</p>
+              <p>Our strategies are built on analytics and performance metrics, not guesswork.</p>
             </div>
             <div class="about-card">
               <h3>Full-Service Management</h3>
-              <p>From ad management to handling follow-ups, we handle everything while you care for pets.</p>
+              <p>From strategy to execution, we handle everything so you can focus on closing deals.</p>
             </div>
             <div class="about-card">
-              <h3>Committed to Your Growth</h3>
-              <p>Our mission is to help pet businesses thrive online with high-converting marketing.</p>
-            </div>
+  <h3>Committed to Your Growth</h3>
+  <p>Our mission is simple — help real estate agents grow through strategic, conversion-focused marketing built from the ground up.</p>
+         </div>
           </div>
         </div>
+        <!-- Removed about-image -->
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-  <div class="paw-prints" id="paw-prints-testimonials"></div>
+<section class="testimonials" id="testimonials">
+  <div class="particles" id="particles-testimonials"></div>
   <div class="container testimonials-container">
     <h2>Testimonials</h2>
-    <p class="testimonial-intro">We're just getting started — here's what we aim for clients to say soon.</p>
+    <p class="testimonial-intro">We’re just getting started — here’s what we aim for clients to say soon.</p>
     <div class="testimonial-list">
+
       <div class="testimonial">
         <div class="testimonial-text">
-          "Before working with Celio, I was spending hours trying to get new customers. Their ad campaigns now bring me consistent booking requests every week, so I can just focus on grooming."
+          “I’m a real estate agent and there’s never enough time in the day. What I like is how this team makes the whole social media thing easier — no fluff, just stuff that works so I can focus on selling.”
         </div>
         <div class="testimonial-user">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Client" class="testimonial-avatar" loading="lazy">
+          <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Agent" class="testimonial-avatar" loading="lazy">
           <div class="testimonial-info">
             <span class="testimonial-name">Future Client</span>
-            <span class="testimonial-role">Pet Grooming Business Owner</span>
+            <span class="testimonial-role">Real Estate Agent – Oakville, ON</span>
           </div>
         </div>
       </div>
+
       <div class="testimonial">
         <div class="testimonial-text">
-          "Celio set up ads that actually reached local pet owners and built an automated follow-up system. Now I don’t lose track of inquiries — most of them turn into paying customers."
+          “When you're running a small team, it's easy to end up posting just to stay active — no real plan behind it. That’s where Celio helps. They bring structure, clean up the brand, and keep things aligned with how we actually work.”
         </div>
         <div class="testimonial-user">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Client" class="testimonial-avatar" loading="lazy">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Lead" class="testimonial-avatar" loading="lazy">
           <div class="testimonial-info">
             <span class="testimonial-name">Soon-to-Be Client</span>
-            <span class="testimonial-role">Pet Daycare Business Owner</span>
+            <span class="testimonial-role">Realtor – Oakville, ON</span>
           </div>
         </div>
       </div>
+
       <div class="testimonial">
         <div class="testimonial-text">
-          "The best part is their transparency. I can see exactly how many bookings come from the ads, and their client retention campaigns keep pet owners coming back."
+          “They actually explain what they’re doing — not just charts and ad spend. When something’s not working, they say it straight and fix it. That’s rare. I like that it’s not just hype.”
         </div>
         <div class="testimonial-user">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Client" class="testimonial-avatar" loading="lazy">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Listing Agent" class="testimonial-avatar" loading="lazy">
           <div class="testimonial-info">
             <span class="testimonial-name">Future Client</span>
-            <span class="testimonial-role">Dog Training Business Owner</span>
+            <span class="testimonial-role">Realtor – Calgary, AB</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+
+
   <!-- Services Section -->
   <section class="services" id="services">
-    <div class="paw-prints" id="paw-prints-services"></div>
+    <div class="particles" id="particles-services"></div>
     <div class="container">
       <h2>Our Services</h2>
-      <p>Comprehensive social media advertising solutions designed specifically to help pet service businesses bring in more pet owners and fill their appointment books.</p>
+      <p>Comprehensive social media advertising solutions designed specifically for real estate professionals looking to generate high-quality buyer and seller leads.</p>
       <div class="services-container">
         <div class="services-grid">
           <div class="service-card">
@@ -1156,12 +989,12 @@
               <i class="fas fa-bullseye"></i>
             </div>
             <h3>Social Media Advertising Strategy</h3>
-            <p>Comprehensive strategy development tailored specifically for pet service businesses, focusing on client acquisition and retention.</p>
+            <p>Comprehensive strategy development tailored specifically for real estate professionals, focusing on buyer and seller lead generation.</p>
             <ul class="service-features">
-              <li>Audience research for pet owners</li>
-              <li>Campaign planning for special offers</li>
-              <li>Budget optimization for local reach</li>
-              <li>Performance tracking</li>
+              <li>Audience Research</li>
+              <li>Campaign Planning</li>
+              <li>Budget Optimization</li>
+              <li>Performance Tracking</li>
             </ul>
           </div>
           <div class="service-card">
@@ -1169,25 +1002,25 @@
               <i class="fab fa-facebook"></i>
             </div>
             <h3>Facebook & Instagram Ads</h3>
-            <p>Expert management of Facebook and Instagram campaigns designed to generate high-quality pet service leads.</p>
+            <p>Expert management of Facebook and Instagram campaigns designed to generate high-quality real estate leads.</p>
             <ul class="service-features">
-              <li>Ads targeting local pet owners</li>
-              <li>Ad creation with engaging pet visuals</li>
-              <li>A/B testing</li>
-              <li>Driving more bookings for your services</li>
+              <li>Ad Creation</li>
+              <li>Audience Targeting</li>
+              <li>A/B Testing</li>
+              <li>Lead Delivery</li>
             </ul>
           </div>
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h3>Bookings & Retention</h3>
-            <p>End-to-end solutions that bring in new pet owners and keep your schedule full.</p>
+            <h3>Real Estate Lead Generation</h3>
+            <p>End-to-end lead generation solutions that deliver qualified prospects ready to buy or sell properties.</p>
             <ul class="service-features">
-              <li>Contact forms for appointments</li>
-              <li>Email reminders / follow-ups</li>
-              <li>Client retention campaigns</li>
-              <li>ROI tracking</li>
+              <li>High-Converting Lead Forms</li>
+              <li>Lead Qualification</li>
+              <li>Instant Lead Access</li>
+              <li>ROI Tracking</li>
             </ul>
           </div>
         </div>
@@ -1196,177 +1029,459 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="paw-prints" id="paw-prints-contact"></div>
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <p>Ready to take your pet service business to the next level? Let’s discuss how we can help you bring in more pet owners through strategic social media advertising.</p>
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Let's Start a Conversation</h3>
-          <p>We're always excited to work with new pet service businesses. Whether you're looking to generate grooming appointments, daycare bookings, or training clients, we have the expertise to help you succeed.</p>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <a href="mailto:info@celio.marketing">info@celio.marketing</a>
-              </div>
+ <section class="contact" id="contact">
+  <div class="particles" id="particles-contact"></div>
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Ready to take your real estate business to the next level? Let's discuss how we can help you generate more qualified leads through strategic social media advertising.</p>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Start a Conversation</h3>
+        <p>We're always excited to work with new real estate professionals. Whether you're looking to generate buyer leads, seller leads, or both, we have the expertise to help you succeed.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-video"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Strategy Call</h4>
-                <a href="https://calendly.com/celio_marketing/new-meeting" target="_blank">
-                  Schedule a Zoom Call
-                </a>
-              </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:info@celio.marketing">info@celio.marketing</a>
             </div>
           </div>
-          <div class="contact-expectations">
-            <h4>What to Expect:</h4>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <p>Response within 24 hours</p>
-            </div>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <p>Free consultation call</p>
-            </div>
-            <div class="expectation-item">
-              <div class="expectation-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <p>Customized strategy proposal</p>
-            </div>
+           <div class="contact-method">
+  <div class="contact-icon">
+    <i class="fas fa-video"></i> <!-- Zoom-style icon -->
+  </div>
+  <div class="contact-details">
+    <h4>Strategy Call</h4>
+    <a href="https://calendly.com/celio_marketing/new-meeting" target="_blank">
+      Schedule a Zoom Call
+    </a>
+  </div>
+</div>
           </div>
-        </div>
-        <div class="contact-form">
-          <form id="contactForm" action="https://formspree.io/f/xblkkyjr" method="POST">
-            <div class="form-group">
-              <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
-              <label for="name" class="form-label">Full Name *</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
-              <label for="email" class="form-label">Email Address *</label>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
-              <label for="phone" class="form-label">Phone Number</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="business" name="business" class="form-input" placeholder=" ">
-              <label for="business" class="form-label">Pet Business Name</label>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
-              <label for="message" class="form-label">Tell us about your pet service business and goals *</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-          <div id="formMessage" class="form-message hidden">
-            <div class="message-content">
+<div class="contact-expectations">
+          <h4>What to Expect:</h4>
+          <div class="expectation-item">
+            <div class="expectation-icon">
               <i class="fas fa-check-circle"></i>
-              <h4>Thanks for reaching out!</h4>
-              <p>We've received your message and one of our specialists will get back to you within 24 hours. We're excited to help you grow your pet service business.</p>
             </div>
+            <p>Response within 24 hours</p>
           </div>
-          <div id="formError" class="form-message error hidden">
-            <div class="message-content">
-              <i class="fas fa-exclamation-triangle"></i>
-              <h4>Something went wrong</h4>
-              <p>Please try again later or email us directly at <a href="mailto:info@celio.marketing">info@celio.marketing</a>.</p>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
             </div>
+            <p>Free consultation call</p>
+          </div>
+          <div class="expectation-item">
+            <div class="expectation-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p>Customized strategy proposal</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Founder Section -->
-  <section class="founder">
-    <div class="paw-prints" id="paw-prints-founder"></div>
-    <div class="container">
-      <div class="founder-container">
-        <div class="founder-card">
-          <div class="founder-image-wrapper">
-            <div class="founder-image">
-              <img src="https://i.ibb.co/Q3FhVKLJ/dil1.jpg" alt="Dil Muhammad - Founder">
-            </div>
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/xblkkyjr" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Full Name *</label>
           </div>
-          <div class="founder-content">
-            <span class="founder-label">Founder & CEO</span>
-            <h3 class="founder-name">Dil Muhammad</h3>
-            <p class="founder-bio">
-              The visionary behind Celio Marketing, driving innovative digital strategies for pet service businesses.
-            </p>
-            <div class="founder-contact">
-              <a href="mailto:dil@celio.marketing" class="contact-item" target="_blank">
-                <i class="fas fa-envelope"></i>
-                <span>dil@celio.marketing</span>
-              </a>
-              <a href="https://www.instagram.com/dil.muhammadch/" class="contact-item" target="_blank">
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-              </a>
-            </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address *</label>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
+            <label for="phone" class="form-label">Phone Number</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" name="company" class="form-input" placeholder=" ">
+            <label for="company" class="form-label">Real Estate Company</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+            <label for="message" class="form-label">Tell us about your business and goals *</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
 
-  <footer>
-    <div class="paw-prints" id="paw-prints-footer"></div>
-    <div class="container">
-      <div class="footer-container">
-        <div class="footer-about">
-          <div class="footer-logo">
-            <img src="https://i.ibb.co/wZTgtsXj/logo-pet-celio-no-bg.png" alt="Celio Marketing Logo" class="footer-logo-img">
-            <span class="footer-logo-text">Celio Marketing</span>
-          </div>
-          <p>Specialized social media marketing for pet service businesses to attract more pet owners and build trust online.</p>
-        </div>
-        <div class="footer-links">
-          <div>
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li><a href="mailto:info@celio.marketing">info@celio.marketing</a></li>
-            </ul>
+        <!-- Success Message -->
+        <div id="formMessage" class="form-message hidden">
+          <div class="message-content">
+            <i class="fas fa-check-circle"></i>
+            <h4>Thanks for reaching out!</h4>
+            <p>We've received your message and one of our specialists will get back to you within 24 hours. We're excited to help you grow your real estate business.</p>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
-        <div style="display: flex; align-items: center;">
-          <p style="margin: 0;">&copy; 2024 Celio Marketing. All rights reserved.</p>
-        </div>
-        <div class="footer-policies">
-          <a href="https://www.celio.marketing/privacy" target="_blank">Privacy Policy</a>
-          <span> | </span>
-          <a href="https://www.celio.marketing/termsofservice" target="_blank">Terms of Service</a>
+
+        <!-- Error Message -->
+        <div id="formError" class="form-message error hidden">
+          <div class="message-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h4>Something went wrong</h4>
+            <p>Please try again later or email us directly at <a href="mailto:info@celio.marketing">info@celio.marketing</a>.</p>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
+<!-- Founder Section -->
+<section class="founder">
+  <div class="particles" id="particles-founder"></div>
+  <div class="container">
+    <div class="founder-container">
+      <div class="founder-card">
+        <div class="founder-image-wrapper">
+          <div class="founder-image">
+            <img src="https://i.ibb.co/Q3FhVKLJ/dil1.jpg" alt="Dil Muhammad - Founder">
+          </div>
+        </div>
+        <div class="founder-content">
+          <span class="founder-label">Founder & CEO</span>
+          <h3 class="founder-name">Dil Muhammad</h3>
+          <p class="founder-bio">
+            The visionary behind Celio Marketing, driving innovative digital strategies for real estate professionals.
+          </p>
+          <div class="founder-contact">
+            <a href="mailto:dil@celio.marketing" class="contact-item" target="_blank">
+              <i class="fas fa-envelope"></i>
+              <span>dil@celio.marketing</span>
+            </a>
+            <a href="https://www.instagram.com/dil.muhammadch/" class="contact-item" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- Founder Section Styles -->
+<style>
+  .founder {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .founder-card {
+    display: flex;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 255, 170, 0.1);
+    border: 1px solid rgba(0, 255, 170, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 35px 60px -15px rgba(0, 255, 170, 0.2);
+  }
+
+  .founder-image-wrapper {
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    background: linear-gradient(45deg, #00ffaa20, #00aaff20);
+  }
+
+  .founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 50px auto;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 8px rgba(0, 255, 170, 0.1);
+    position: relative;
+  }
+
+  .founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .founder-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .founder-content {
+    padding: 60px;
+    flex: 1;
+  }
+
+  .founder-label {
+    display: inline-block;
+    background: rgba(0, 255, 170, 0.1);
+    color: var(--color-accent);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .founder-name {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: white;
+    position: relative;
+    display: inline-block;
+  }
+
+  .founder-name::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 3px;
+  }
+
+  .founder-bio {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+  }
+
+  .contact-item:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-item:hover i {
+    transform: scale(1.2);
+  }
+
+  #particles-founder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    .founder-card {
+      flex-direction: column;
+    }
+
+    .founder-image-wrapper {
+      width: 100%;
+      padding: 40px 0;
+    }
+
+    .founder-content {
+      padding: 40px 20px;
+    }
+  }
+</style>
+
+<!-- Add This CSS -->
+<style>
+  .form-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(0, 255, 170, 0.05);
+    border: 1px solid #00ffaa40;
+    color: #00ffae;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+  }
+
+  .form-message h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-message p {
+    font-size: 1rem;
+    margin: 0;
+    color: #bfffe8;
+  }
+
+  .form-message i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .form-message.error {
+    background: rgba(255, 0, 0, 0.05);
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+  }
+
+  .form-message.error p {
+    color: #ffbaba;
+  }
+
+  .hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .form-message.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .contact-expectations {
+    margin-top: 30px;
+  }
+
+  .expectation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .expectation-icon {
+    color: #00ffae;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expectation-item p {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+   .footer-social {
+  margin-top: 15px;
+}
+
+.social-icon-link {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon-link:hover {
+  color: var(--color-accent); /* neon blue */
+  transform: scale(1.2);
+}
+
+</style>
+
+<!-- Add This Script -->
+<script>
+  const form = document.getElementById('contactForm');
+  const messageBox = document.getElementById('formMessage');
+  const errorBox = document.getElementById('formError');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      messageBox.classList.add('show');
+      errorBox.classList.remove('show');
+    } else {
+      errorBox.classList.add('show');
+      messageBox.classList.remove('show');
+    }
+  });
+</script>
+
+<footer>
+  <div class="particles" id="particles-footer"></div>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="https://i.ibb.co/BVXHH3fC/design-a-modern-professional-logo-for-ce-DFg3-WFl-GQj-Sg2l-WFKED3rw-1xt-TBg-Wv-Q3usp5-EPDLBe-Xw-Phot.png" alt="Celio Marketing Logo" class="footer-logo-img">
+          <span class="footer-logo-text">Celio Marketing</span>
+        </div>
+        <p>Specialized social media marketing for real estate agents to generate high-quality leads and build trust online.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@celio.marketing">info@celio.marketing</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+      <div style="display: flex; align-items: center;">
+        <p style="margin: 0;">&copy; 2024 Celio Marketing. All rights reserved.</p>
+      </div>
+      <div class="footer-policies">
+        <a href="https://www.celio.marketing/privacy" target="_blank">Privacy Policy</a>
+        <span> | </span>
+        <a href="https://www.celio.marketing/termsofservice" target="_blank">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
   <script>
     // Mobile Menu Toggle
@@ -1375,7 +1490,7 @@
     mobileMenuBtn.addEventListener('click', () => {
       nav.classList.toggle('active');
       mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
-        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars'></i>';
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
     });
 
     // Header Scroll Effect
@@ -1404,38 +1519,39 @@
       }
     });
 
-    // Form Submission
-    const form = document.getElementById('contactForm');
-    const messageBox = document.getElementById('formMessage');
-    const errorBox = document.getElementById('formError');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+    // Particles Background
+    function createParticles() {
+      const sections = [
+        { id: 'particles-js', count: 60 },
+        { id: 'particles-about', count: 40 },
+        { id: 'particles-testimonials', count: 35 },
+        { id: 'particles-services', count: 40 },
+        { id: 'particles-contact', count: 40 },
+        { id: 'particles-footer', count: 30 }
+      ];
+      sections.forEach(section => {
+        const container = document.getElementById(section.id);
+        if (!container) return;
+        for (let i = 0; i < section.count; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          const size = Math.random() * 6 + 4 + 'px';
+          particle.style.width = size;
+          particle.style.height = size;
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = '100%';
+          particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+          particle.style.backgroundColor = Math.random() > 0.5 ? 'var(--color-accent)' : 'var(--color-accent-alt)';
+          particle.style.opacity = Math.random() * 0.4 + 0.2;
+          container.appendChild(particle);
+        }
       });
-
-      if (res.ok) {
-        form.reset();
-        messageBox.classList.add('show');
-        errorBox.classList.remove('show');
-      } else {
-        errorBox.classList.add('show');
-        messageBox.classList.remove('show');
-      }
-    });
-
-    // Paw Prints Background - REMOVED
-    function createPawPrints() {
-      // Function removed as paw prints are no longer needed
     }
-    
-    createPawPrints();
+    createParticles();
   </script>
+</body>
+</html>
+<!-- partial -->
+  
 </body>
 </html>
