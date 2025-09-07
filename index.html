@@ -1414,6 +1414,30 @@
   color: var(--color-accent);
   transform: scale(1.2);
 }
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .social-icon:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    transform: translateY(-3px);
+  }
 
 </style>
 
@@ -1444,7 +1468,6 @@
     }
   });
 </script>
-
 <footer>
   <div class="particles" id="particles-footer"></div>
   <div class="container">
@@ -1471,7 +1494,17 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:info@celio.marketing">info@celio.marketing</a></li>
-            
+            <li class="social-icons" style="margin-top: 15px;">
+              <a href="https://www.instagram.com/celiomarketing/?hl=en" target="_blank" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61578879893158" target="_blank" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://wa.me/923265444765" target="_blank" class="social-icon" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
